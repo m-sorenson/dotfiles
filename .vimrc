@@ -40,7 +40,7 @@ au Syntax * RainbowParenthesesLoadBraces
 
 " Airline
 set laststatus=2
-let g:airline_theme="murmur"
+let g:airline_theme="badwolf"
 
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR>
@@ -95,14 +95,14 @@ if has('gui_running')
 	set guioptions-=r
 	set guioptions-=T
 	set guioptions-=m
+	set guifont=hermit\ 10
 	color chance-of-storm
 else
 	color neverness
 endif
 
 set number
-"set cursorline
-"set nowrap
+set cursorline
 set shiftwidth=4
 set tabstop=4
 set shell=/bin/sh
