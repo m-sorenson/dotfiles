@@ -1,0 +1,70 @@
+URxvt*foreground: #e6e6e6
+URxvt*background: #1c2027
+!
+!*color0: #333366
+!*color1: #6666cc
+!*color2: #0099cc
+!*color3: #3366cc
+!*color4: #006699
+!*color5: #0066ff
+!*color6: #669999
+!*color7: #99cccc
+!*color8: #333399
+!*color9: #9999ff
+!*color10: #00ccff
+!*color11: #6699ff
+!*color12: #0099cc
+!*color13: #0099ff
+!*color14: #66cccc
+!*color15: #ccffff
+
+#define base00 #161b1d
+#define base01 #1f292e
+#define base02 #516d7b
+#define base03 #5a7b8c
+#define base04 #7195a8
+#define base05 #7ea2b4
+#define base06 #c1e4f6
+#define base07 #ebf8ff
+#define base08 #d22d72
+#define base09 #935c25
+#define base0A #8a8a0f
+#define base0B #568c3b
+#define base0C #2d8f6f
+#define base0D #257fad
+#define base0E #5d5db1
+#define base0F #b72dd2
+
+*cursorColor: base05
+*color00: base00
+*color01: base08
+*color02: base0B
+*color03: base0A
+*color04: base0D
+*color05: base0E
+*color06: base0C
+*color07: base05
+*color08: base03
+*color09: base09
+*color10: base01
+*color11: base02
+*color12: base04
+*color13: base06
+*color14: base0F
+*color15: base07
+
+URxvt*font: xft:hermit:pixelsize=12:antialias=true:hinting=true
+URxvt*boldFont: xft:hermit:bold:pixelsize=12:antialias=true:hinting=true
+URxvt.scrollBar: false
+URxvt*.transparent: false
+! 0 to 99 darkens, 101 to 200 lightens
+!URxvt*.shading: 15
+
+URxvt.perl-ext-common: default,matcher,clipboard
+URxvt.keysym.M-C-c: perl:clipboard:copy
+URxvt.keysym.M-C-v: perl:clipboard:paste
+URxvt.clipboard.copycmd: xclip -i -selection clipboard
+URxvt.clipboard.pastecmd: xclip -o -selection clipboard
+
+dzen2.foreground: #e6e6e6
+dzen2.background: #1c2027
