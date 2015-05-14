@@ -1,0 +1,53 @@
+! Chance-of-Storm
+*.foreground:   #cacfd3
+*.background:   #181c20
+*.cursorColor:  #2D7889
+
+! black
+*.color0:       #2a2e31
+*.color8:       #2e363d
+
+! red
+*.color1:       #bb6d6d
+*.color9:       #ef7760
+
+! green
+*.color2:       #6dbb6d
+*.color10:      #89E14B
+
+! yellow
+*.color3:       #e5a458!
+*.color11:      #e1d4a8
+
+! blue
+*.color4:       #1E415E
+*.color12:      #489fd7
+
+! magenta
+*.color5:       #AF81F4
+*.color13:      #9e7cd7
+
+! cyan
+*.color6:       #2D7889
+*.color14:      #2ed6d7
+
+! white
+*.color7:       #b0b0b0
+*.color15:      #dddddd
+
+
+URxvt*font: xft:hermit:pixelsize=12:antialias=true:hinting=true
+URxvt*boldFont: xft:hermit:bold:pixelsize=12:antialias=true:hinting=true
+URxvt.scrollBar: false
+URxvt*.transparent: false
+! 0 to 99 darkens, 101 to 200 lightens
+!URxvt*.shading: 15
+
+URxvt.perl-ext-common: default,matcher,clipboard
+URxvt.keysym.M-C-c: perl:clipboard:copy
+URxvt.keysym.M-C-v: perl:clipboard:paste
+URxvt.clipboard.copycmd: xclip -i -selection clipboard
+URxvt.clipboard.pastecmd: xclip -o -selection clipboard
+
+dzen2.foreground: #e6e6e6
+dzen2.background: #1c2027
