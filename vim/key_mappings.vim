@@ -33,6 +33,14 @@ let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
 map <Leader>f :CommandT<CR>
 map <Leader>b :CommandTBuffer<CR>
 
+"" Neosnippet
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"
+
 nmap <leader>e :call JSFormat()<cr>
 
 if bufwinnr(1)
