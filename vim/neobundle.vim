@@ -22,7 +22,6 @@ NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/context_filetype.vim'
 NeoBundle 'tpope/vim-fugitive'
-"NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'wincent/Command-T'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'bling/vim-airline'
@@ -60,6 +59,7 @@ NeoBundle 'lilydjwg/colorizer'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'yonchu/accelerated-smooth-scroll'
+NeoBundle 'vim-erlang/vim-erlang-omnicomplete'
 
 " Required:
 call neobundle#end()
