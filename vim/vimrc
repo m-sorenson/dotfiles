@@ -74,6 +74,10 @@ highlight TrailingWhitespace ctermbg=red guibg=red
 au Syntax * syn match TrailingWhitespace /\s\+$/
 match TrailingWhitespace /\s\+$/
 
+" FileType Options
+au FileType erlang setlocal tabstop=4
+au FileType erlang setlocal shiftwidth=4
+
 "
 " FUNCTIONS
 "
