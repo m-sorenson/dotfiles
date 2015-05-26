@@ -1,5 +1,5 @@
-ZSH_THEME_GIT_PROMPT_DIRTY="$fg[red]"
-ZSH_THEME_GIT_PROMPT_CLEAN="$fg[green]"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}"
 
 function get_pwd() {
   path="${PWD/$HOME/~}"
@@ -12,4 +12,4 @@ function git_branch() {
   echo " $(parse_git_dirty)$(current_branch) "
 }
 
-PROMPT=' $fg[magenta]$(get_pwd)$(git_branch)$reset_color'
+PROMPT=' %{$fg[magenta]%}$(get_pwd)$(git_branch)%{$reset_color%}'
