@@ -28,15 +28,15 @@ ZSH_THEME="s"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to disable command auto-correction.
-# DISABLE_CORRECTION="true"
+DISABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -55,10 +55,19 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:/home/michael/.cabal/bin:/home/michael/.gem/ruby/2.1.0/bin:/home/michael/Go/bin:/home/michael/bin"
-export GOPATH='/home/michael/Go'
+#export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:/home/michael/.cabal/bin:/home/michael/.gem/ruby/2.1.0/bin:/home/michael/Go/bin:/home/michael/bin:$PATH"
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/texlive/2013/bin/x86_64-darwin:~/bin:$PATH
+#export GOPATH='/home/michael/Go'
 # export MANPATH="/usr/local/man:$MANPATH"
 
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/michaelsorenson/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+
+function removeFromPath() {
+  export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
+}
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -79,6 +88,6 @@ alias sumo='sudo'
 alias emacs='emacs -nw'
 TERM=xterm-256color
 alias df='df -h'
-alias ls='ls -h --color=auto'
-alias node='node --harmony --use_strict'
+alias ls='ls -h -G'
+alias node='node --harmony'
 alias kearl='curl'
