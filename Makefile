@@ -16,3 +16,12 @@ uninstall:
 	rm -Rf $$HOME/.zsh
 	rm -f $$HOME/.Xresources
 	rm -f $$HOME/.xinitrc
+
+gui:
+	rm -Rf $$HOME/.xmonad
+	rm -Rf $$HOME/.icons/dzen2
+	mkdir $$HOME/.xmonad
+	ln -s $$PWD/xmonad/xmonad.hs $$HOME/.xmonad/xmonad.hs
+	ln -s $$PWD/xmonad/status_bar $$HOME/.xmonad/status_bar
+	ln -s $$PWD/xmonad/user_bar $$HOME/.xmonad/user_bar
+	ln -s $$PWD/xmonad/dzen2 $$HOME/.icons/dzen2
