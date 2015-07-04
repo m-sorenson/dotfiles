@@ -18,7 +18,7 @@ compton --config ~/.config/compton.conf -b &
 #xmobar &
 
 #Window Manager
-#exec xmonad
-exec franken-dzen
+exec xmonad
+#exec franken-dzen
 #exec gnome-session
 #exec startxfce4
