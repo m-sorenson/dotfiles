@@ -21,7 +21,6 @@ map <Leader>wK <C-w>K
 map <Leader>wL <C-w>L
 
 "" Easy Motion config
-nmap s <Plug>(easymotion-s2)
 map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
@@ -40,6 +39,9 @@ imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)"
 \: "\<TAB>"
+
+"" Vim Shell
+map <Leader>s :VimShell<CR>
 
 nmap <leader>e :call JSFormat()<cr>
 
