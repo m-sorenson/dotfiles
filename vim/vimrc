@@ -27,13 +27,6 @@ syntax on
 
 "autocmd FileType javascript setlocal omnifunc=tern#Complete
 
-" vimfiler
-" open vimfilerexplorer on the current dir
-"autocmd VimEnter * VimFilerExplorer .
-autocmd VimEnter * if !argc() | VimFilerExplorer . | endif
-autocmd BufEnter * if (winnr('$') == 1 && &filetype ==# 'vimfiler') | q | endif
-let g:vimfiler_force_overwrite_statusline = 1
-
 " numbers
 "autocmd FocusLost   * :set number
 "autocmd FocusGained * :set relativenumber
