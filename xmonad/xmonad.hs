@@ -56,8 +56,8 @@ newManageHook = myManageHook <+> manageHook defaultConfig
 myLogHook h = dynamicLogWithPP ( defaultPP
     {
         ppCurrent   = dzenColor iconColor background . pad . (\x -> "^i(/home/michael/.icons/dzen2/full.xbm)")
-      , ppVisible   = dzenColor color5 background . pad . (\x -> "^i(/home/michael/.icons/dzen2/full.xbm)")
-      , ppHidden   = dzenColor color7 background . pad . (\x -> "^i(/home/michael/.icons/dzen2/full.xbm)")
+      , ppVisible   = dzenColor color13 background . pad . (\x -> "^i(/home/michael/.icons/dzen2/full.xbm)")
+      , ppHidden   = dzenColor color15 background . pad . (\x -> "^i(/home/michael/.icons/dzen2/full.xbm)")
       , ppHiddenNoWindows   = dzenColor color7 background . pad . (\x -> "^i(/home/michael/.icons/dzen2/empty.xbm)")
       , ppWsSep   = ""
       , ppSep   = "   "
