@@ -20,6 +20,16 @@ map <Leader>wJ <C-w>J
 map <Leader>wK <C-w>K
 map <Leader>wL <C-w>L
 
+"" Tabs
+map <Leader>to :tabedit<CR>
+map <Leader>tc :tabclose<CR>
+map <Leader>tl :tabn<CR>
+map <Leader>th :tabp<CR>
+
+"" Git
+map <Leader>gd :Gdiff<CR>
+map <Leader>gb :Gblame<CR>
+
 "" Easy Motion config
 map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
@@ -30,7 +40,9 @@ let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
 
 "" Command T
 map <Leader>f :CommandT<CR>
+map <Leader>F :CommandTFlush<CR>
 map <Leader>b :CommandTBuffer<CR>
+map <Leader>B :bd<CR>
 
 "" Neosnippet
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
@@ -50,7 +62,4 @@ if bufwinnr(1)
     map - <C-W>-
 endif
 
-" enable quick look
-let g:vimfiler_quick_look_command = 'qlmanage -p'
-"nmap <buffer> p <Plug>(vimfiler_quick_look)
-
+let mapleader=","
