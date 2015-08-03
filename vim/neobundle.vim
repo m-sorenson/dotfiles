@@ -30,8 +30,7 @@ NeoBundle 'jeffkreeftmeijer/vim-numbertoggle'
 " mostly from Shougo
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
-"NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'Shougo/vimfiler.vim'
+NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Shougo/unite-outline'
 
@@ -61,6 +60,8 @@ NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'yonchu/accelerated-smooth-scroll'
 NeoBundle 'vim-erlang/vim-erlang-omnicomplete'
+NeoBundle 'godlygeek/tabular'
+
 
 " Required:
 call neobundle#end()

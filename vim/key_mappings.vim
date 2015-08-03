@@ -55,6 +55,24 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 "" Vim Shell
 map <Leader>s :VimShell<CR>
 
+"" Tabular
+nmap <Leader>a&      :Tabularize /&<CR>
+vmap <Leader>a&      :Tabularize /&<CR>
+nmap <Leader>a=      :Tabularize /^[^=]*\zs=<CR>
+vmap <Leader>a=      :Tabularize /^[^=]*\zs=<CR>
+nmap <Leader>a=>     :Tabularize /=><CR>
+vmap <Leader>a=>     :Tabularize /=><CR>
+nmap <Leader>a:      :Tabularize /:<CR>
+vmap <Leader>a:      :Tabularize /:<CR>
+nmap <Leader>a::     :Tabularize /:\zs<CR>
+vmap <Leader>a::     :Tabularize /:\zs<CR>
+nmap <Leader>a,      :Tabularize /,<CR>
+vmap <Leader>a,      :Tabularize /,<CR>
+nmap <Leader>a,,     :Tabularize /,\zs<CR>
+vmap <Leader>a,,     :Tabularize /,\zs<CR>
+nmap <Leader>a<Bar>  :Tabularize /<Bar><CR>
+vmap <Leader>a<Bar>  :Tabularize /<Bar><CR>
+
 nmap <leader>e :call JSFormat()<cr>
 
 if bufwinnr(1)
