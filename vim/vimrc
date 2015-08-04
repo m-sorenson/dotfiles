@@ -10,8 +10,8 @@ source ~/.vim/key_mappings.vim
 
 let g:gitgutter_max_signs = 500  " default value
 
-set background=dark
-color material-theme
+color chance-of-storm
+
 " gvim
 if has('gui_running')
 	set guioptions-=L
@@ -19,6 +19,8 @@ if has('gui_running')
 	set guioptions-=T
 	set guioptions-=m
 	set guifont=hermit\ 10
+  set background=dark
+  color material-theme
 endif
 
 " vimfiler settings
