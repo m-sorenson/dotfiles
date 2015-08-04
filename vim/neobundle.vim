@@ -23,18 +23,17 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/context_filetype.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'wincent/Command-T'
-NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'jeffkreeftmeijer/vim-numbertoggle'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'Lokaltog/vim-easymotion'
 
 " mostly from Shougo
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'ujihisa/unite-colorscheme'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Shougo/unite-outline'
 
-
+NeoBundle 'Shougo/vimshell'
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
@@ -45,7 +44,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 \     'unix' : 'gmake',
 \    },
 \ }
-NeoBundle 'Shougo/vimshell'
+NeoBundle 'ujihisa/unite-colorscheme'
 
 
 " Other
@@ -55,12 +54,15 @@ NeoBundle 'elzr/vim-json'
 NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'jimenezrick/vimerl'
 NeoBundle 'elixir-lang/vim-elixir'
-NeoBundle 'lilydjwg/colorizer'
-NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'yonchu/accelerated-smooth-scroll'
 NeoBundle 'vim-erlang/vim-erlang-omnicomplete'
 NeoBundle 'godlygeek/tabular'
+
+" Colors
+NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'lilydjwg/colorizer'
+NeoBundle 'kien/rainbow_parentheses.vim'
+NeoBundle 'jdkanani/vim-material-theme'
 
 
 " Required:
