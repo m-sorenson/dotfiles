@@ -47,6 +47,12 @@ NeoBundle 'Shougo/vimproc.vim', {
 NeoBundle 'ujihisa/unite-colorscheme'
 
 
+" Colors
+NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'lilydjwg/colorizer'
+NeoBundle 'kien/rainbow_parentheses.vim'
+NeoBundle 'jdkanani/vim-material-theme'
+
 " Other
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'chase/vim-ansible-yaml'
@@ -57,12 +63,7 @@ NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'yonchu/accelerated-smooth-scroll'
 NeoBundle 'vim-erlang/vim-erlang-omnicomplete'
 NeoBundle 'godlygeek/tabular'
-
-" Colors
-NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'lilydjwg/colorizer'
-NeoBundle 'kien/rainbow_parentheses.vim'
-NeoBundle 'jdkanani/vim-material-theme'
+NeoBundle 'editorconfig/editorconfig-vim'
 
 
 " Required:
