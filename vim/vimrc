@@ -51,6 +51,9 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
+" CommandT
+set wildignore+=node_modules/**
+
 " Cursor
 if has('gui_running')
     au WinLeave * set nocursorline nocursorcolumn
