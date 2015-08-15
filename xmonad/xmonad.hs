@@ -55,10 +55,10 @@ newManageHook = myManageHook <+> manageHook defaultConfig
 
 myLogHook h = dynamicLogWithPP ( defaultPP
     {
-        ppCurrent   = dzenColor iconColor background . pad . (\x -> "^i(/home/michael/.icons/dzen2/full.xbm)")
-      , ppVisible   = dzenColor color13 background . pad . (\x -> "^i(/home/michael/.icons/dzen2/full.xbm)")
-      , ppHidden   = dzenColor color15 background . pad . (\x -> "^i(/home/michael/.icons/dzen2/full.xbm)")
-      , ppHiddenNoWindows   = dzenColor color7 background . pad . (\x -> "^i(/home/michael/.icons/dzen2/empty.xbm)")
+        ppCurrent   = dzenColor iconColor background . pad
+      , ppVisible   = dzenColor color13 background . pad
+      , ppHidden   = dzenColor color15 background . pad
+      , ppHiddenNoWindows   = dzenColor color7 background . pad . (\x -> "-")
       , ppWsSep   = ""
       , ppSep   = "   "
       , ppLayout   = dzenColor background background . shorten 0
@@ -67,8 +67,8 @@ myLogHook h = dynamicLogWithPP ( defaultPP
       , ppOutput   = hPutStrLn h
     } )
 
-myWorkspaceBar = "dzen2 -x '0' -y '0' -h '18' -ta 'c' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont++" -e onstart=lower"
-myStatusBar = "/home/michael/.xmonad/status_bar '"++foreground++"' '"++background++"' '"++ iconColor ++"' "++myFont
+myWorkspaceBar = "dzen2 -x '0' -y '0' -h '24' -ta 'c' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont++" -e onstart=lower"
+myStatusBar = "/home/michael/.xmonad/zen_bar '"++foreground++"' '"++background++"' '"++ iconColor ++"' "++myFont
 myUserBar = "/home/michael/.xmonad/user_bar '"++foreground++"' '"++background++"' '"++ iconColor ++"' "++myFont
 
 
@@ -98,8 +98,9 @@ main = do
 myTerminal = "urxvt"
 myBorderWidth = 3
 --myFont ="-*-terminus-*-r-*-*-*-*-*-*-*-*-*-*"
---myFont ="xft:hermit:pixelsize=14:antialias=true"
-myFont ="-*-ohsnap-medium-r-*-*-12-*-*-*-*-*-*-*"
+--myFont ="xft:hermit:pixelsize=16:antialias=true"
+myFont ="-*-hermit-medium-r-*-*-16-*-*-*-*-*-*-*"
+--myFont ="-*-ohsnap-medium-r-*-*-12-*-*-*-*-*-*-*"
 iconColor = color12
 foreground = "#cacfd3"
 background = "#181c20"
