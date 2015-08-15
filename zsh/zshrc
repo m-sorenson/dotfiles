@@ -82,3 +82,4 @@ alias df='df -h'
 alias ls='ls -h --color=auto'
 alias kearl='curl'
 alias node='node --harmony'
+archey3
