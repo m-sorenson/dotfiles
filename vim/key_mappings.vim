@@ -44,6 +44,9 @@ map <Leader>F :CommandTFlush<CR>
 map <Leader>b :CommandTBuffer<CR>
 map <Leader>B :bd<CR>
 
+"" NerdTree
+map <Leader>n :NERDTreeToggle<CR>
+
 "" Neosnippet
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)"
