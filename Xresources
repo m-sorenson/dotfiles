@@ -36,8 +36,8 @@
 *.color15:      #dddddd
 
 
-URxvt*font: xft:hermit:pixelsize=12:antialias=true:hinting=true
-URxvt*boldFont: xft:hermit:bold:pixelsize=12:antialias=true:hinting=true
+URxvt*font: xft:hermit:pixelsize=16:antialias=true:hinting=true
+URxvt*boldFont: xft:hermit:pixelsize=16:antialias=true:hinting=true
 URxvt.scrollBar: false
 URxvt*.transparent: false
 ! 0 to 99 darkens, 101 to 200 lightens
