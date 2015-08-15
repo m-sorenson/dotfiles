@@ -5,8 +5,8 @@ BG_COLOR=$2
 ICON_COLOR=$3
 FONT=$4
 WIDTH=100
-HEIGHT=18
-ARCH_ICON="/home/michael/.icons/dzen2/arch_10x10.xbm"
+HEIGHT=24
+ARCH_ICON="/home/michael/.icons/dzen2/arch.xbm"
 
 icon() {
 	echo "^fg($ICON_COLOR)^i($1)^fg()"
@@ -14,6 +14,6 @@ icon() {
 
 
 while :; do
-  echo " $(icon $ARCH_ICON) $(whoami)"
+  echo "  $(whoami)"
   sleep 3
 done | dzen2 -fg $FG_COLOR -bg $BG_COLOR -ta l -w $WIDTH -h $HEIGHT -x '0' -y '0' -fn $FONT -e "onstart=lower"
