@@ -18,7 +18,7 @@ if has('gui_running')
 	set guioptions-=r
 	set guioptions-=T
 	set guioptions-=m
-	set guifont=hermit\ 10
+  set guifont=hermit\ 12
   set background=dark
   color material-theme
 endif
@@ -52,7 +52,7 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 " CommandT
-set wildignore+=node_modules/**
+set wildignore+=node_modules/**,_build/**,deps/**
 
 " Cursor
 if has('gui_running')
