@@ -55,10 +55,10 @@ newManageHook = myManageHook <+> manageHook defaultConfig
 
 myLogHook h = dynamicLogWithPP ( defaultPP
     {
-        ppCurrent   = dzenColor iconColor background . pad
-      , ppVisible   = dzenColor color13 background . pad
-      , ppHidden   = dzenColor color15 background . pad
-      , ppHiddenNoWindows   = dzenColor color7 background . pad . (\x -> "-")
+        ppCurrent   = dzenColor iconColor background . pad . (\x -> "^r(36x12)")
+      , ppVisible   = dzenColor color13 background . pad . (\x -> "^r(36x12)")
+      , ppHidden   = dzenColor color15 background . pad . (\x -> "^ca(1, xdotool key alt+" ++ show x ++")^r(36x12)^ca()")
+      , ppHiddenNoWindows   = dzenColor color7 background . pad . (\x -> "^ca(1, xdotool key alt+" ++ show x ++ ")^ro(36x12)^ca()")
       , ppWsSep   = ""
       , ppSep   = "   "
       , ppLayout   = dzenColor background background . shorten 0
@@ -67,15 +67,12 @@ myLogHook h = dynamicLogWithPP ( defaultPP
       , ppOutput   = hPutStrLn h
     } )
 
-myWorkspaceBar = "dzen2 -x '0' -y '0' -h '24' -ta 'c' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont++" -e onstart=lower"
+myWorkspaceBar = "dzen2 -x '0' -y '0' -h '24' -w '1420' -ta 'l' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont++" -e onstart=lower"
 myStatusBar = "/home/michael/.xmonad/zen_bar '"++foreground++"' '"++background++"' '"++ iconColor ++"' "++myFont
-myUserBar = "/home/michael/.xmonad/user_bar '"++foreground++"' '"++background++"' '"++ iconColor ++"' "++myFont
-
 
 main = do
   dzenLeftBar <- spawnPipe myWorkspaceBar
   dzenRightBar <- spawnPipe myStatusBar
-  dzenCorner <- spawnPipe myUserBar
   xmonad $ defaultConfig
     { terminal = myTerminal
     , borderWidth = myBorderWidth
