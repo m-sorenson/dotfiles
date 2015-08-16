@@ -1,40 +1,4 @@
-! Chance-of-Storm
-*.foreground:   #cacfd3
-*.background:   #181c20
-*.cursorColor:  #2D7889
-
-! black
-*.color0:       #2a2e31
-*.color8:       #2e363d
-
-! red
-*.color1:       #bb6d6d
-*.color9:       #ef7760
-
-! green
-*.color2:       #6dbb6d
-*.color10:      #89E14B
-
-! yellow
-*.color3:       #e5a458
-*.color11:      #e1d4a8
-
-! blue
-*.color4:       #1E415E
-*.color12:      #489fd7
-
-! magenta
-*.color5:       #AF81F4
-*.color13:      #9e7cd7
-
-! cyan
-*.color6:       #2D7889
-*.color14:      #2ed6d7
-
-! white
-*.color7:       #b0b0b0
-*.color15:      #dddddd
-
+#include "/home/michael/.colors/material"
 
 URxvt*font: xft:hermit:pixelsize=16:antialias=true:hinting=true
 URxvt*boldFont: xft:hermit:pixelsize=16:antialias=true:hinting=true
