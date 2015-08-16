@@ -20,8 +20,9 @@ uninstall:
 gui:
 	rm -Rf $$HOME/.xmonad
 	rm -Rf $$HOME/.icons/dzen2
+	rm -f $$HOME/.config/compton.conf
 	mkdir $$HOME/.xmonad
 	ln -s $$PWD/xmonad/xmonad.hs $$HOME/.xmonad/xmonad.hs
-	ln -s $$PWD/xmonad/status_bar $$HOME/.xmonad/status_bar
-	ln -s $$PWD/xmonad/user_bar $$HOME/.xmonad/user_bar
+	ln -s $$PWD/xmonad/zen_bar $$HOME/.xmonad/zen_bar
 	ln -s $$PWD/xmonad/dzen2 $$HOME/.icons/dzen2
+	ln -s $$PWD/compton.conf $$HOME/.config/compton.conf
