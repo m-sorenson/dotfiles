@@ -24,12 +24,12 @@
 *.color12:      #80d8ff
 
 ! magenta
-*.color5:       #9575cd
-*.color13:      #7986cb
+*.color5:       #7986cb
+*.color13:      #9575cd
 
 ! cyan
-*.color6:       #4dd0e1
-*.color14:      #4db6ac
+*.color6:       #4db6ac
+*.color14:      #4dd0e1
 
 ! white
 *.color7:       #e0e0e0
