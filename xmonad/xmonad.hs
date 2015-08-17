@@ -55,19 +55,19 @@ newManageHook = myManageHook <+> manageHook defaultConfig
 
 myLogHook h = dynamicLogWithPP ( defaultPP
     {
-        ppCurrent   = dzenColor iconColor background . pad . (\x -> "^r(36x12)")
-      , ppVisible   = dzenColor color13 background . pad . (\x -> "^r(36x12)")
-      , ppHidden   = dzenColor color15 background . pad . (\x -> "^ca(1, xdotool key alt+" ++ show x ++")^r(36x12)^ca()")
-      , ppHiddenNoWindows   = dzenColor color7 background . pad . (\x -> "^ca(1, xdotool key alt+" ++ show x ++ ")^ro(36x12)^ca()")
+        ppCurrent   = dzenColor active background . pad . (\x -> "^r(36x12)")
+      , ppVisible   = dzenColor passive background . pad . (\x -> "^r(36x12)")
+      , ppHidden   = dzenColor foreground background . pad . (\x -> "^ca(1, xdotool key alt+" ++ show x ++")^r(36x12)^ca()")
+      , ppHiddenNoWindows   = dzenColor foreground  background . pad . (\x -> "^ca(1, xdotool key alt+" ++ show x ++ ")^ro(36x12)^ca()")
       , ppWsSep   = ""
       , ppSep   = "   "
       , ppLayout   = dzenColor background background . shorten 0
-      , ppTitle   = dzenColor background background .shorten 0
+      , ppTitle   = dzenColor background background . shorten 0
       , ppOrder   = \(ws:l:t:_) -> [ws, l, t]
       , ppOutput   = hPutStrLn h
     } )
 
-myWorkspaceBar = "dzen2 -x '0' -y '0' -h '24' -w '1420' -ta 'l' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont++" -e onstart=lower"
+myWorkspaceBar = "dzen2 -x '0' -y '0' -h '36' -w '1420' -ta 'l' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont++" -e onstart=lower"
 myStatusBar = "/home/michael/.xmonad/zen_bar '"++foreground++"' '"++background++"' '"++ iconColor ++"' "++myFont
 
 main = do
@@ -79,7 +79,7 @@ main = do
     , layoutHook = smartBorders $ myLayout
     , workspaces = myWorkspaces
     , manageHook = newManageHook
-    , focusedBorderColor = color12
+    , focusedBorderColor = foreground
     , normalBorderColor = background
     , startupHook = setWMName "LG3D"
     , logHook = myLogHook dzenLeftBar
@@ -87,41 +87,19 @@ main = do
 
     `additionalKeys`
     [((mod1Mask, xK_x), kill)
-    ,((mod1Mask, xK_r), spawn "dmenu2_run")
+    ,((mod1Mask, xK_r), spawn "~/bin/dmenu2_run")
+    ,((mod1Mask, xK_p), spawn "~/bin/dmenu2_run")
     ,((mod1Mask, xK_o), swapNextScreen)
     ,((mod1Mask .|. shiftMask, xK_o), shiftNextScreen)
     ]
 
-myTerminal = "urxvt"
-myBorderWidth = 3
---myFont ="-*-terminus-*-r-*-*-*-*-*-*-*-*-*-*"
---myFont ="xft:hermit:pixelsize=16:antialias=true"
-myFont ="-*-hermit-medium-r-*-*-16-*-*-*-*-*-*-*"
---myFont ="-*-ohsnap-medium-r-*-*-12-*-*-*-*-*-*-*"
-iconColor = color12
-foreground = "#cacfd3"
-background = "#181c20"
---black
-color0 =       "#2a2e31"
-color8 =       "#2e363d"
---red
-color1 =       "#bb6d6d"
-color9 =       "#ef7760"
---green
-color2 =       "#6dbb6d"
-color10 =      "#89E14B"
---yellow
-color3 =       "#e5a458"
-color11 =      "#e1d4a8"
---blue
-color4 =       "#1E415E"
-color12 =      "#489fd7"
---magenta
-color5 =       "#AF81F4"
-color13 =      "#9e7cd7"
---cyan
-color6 =       "#2D7889"
-color14 =      "#2ed6d7"
---white
-color7 =       "#b0b0b0"
-color15 =      "#dddddd"
+myTerminal    = "urxvt"
+myBorderWidth = 5
+-- Font
+myFont        = "-*-hermit-medium-r-*-*-16-*-*-*-*-*-*-*"
+-- Colors
+iconColor     = passive
+foreground    = "#1DB5A2"
+background    = "#151A21"
+active        = "#25323A"
+passive       = "#B5E8DA"
