@@ -5,18 +5,18 @@
 FG_COLOR=$1
 BG_COLOR=$2
 WIDTH=500
-HEIGHT=24
+HEIGHT=36
 X=1420
 Y=0
 TEXT_ALIGNMENT="right"
 ICON_COLOR=$3
 FONT=$4
 
-SEP="^fg(#2e363d) | ^fg()"
+SEP="^fg('#25323A') | ^fg()"
 
-BAR_STYLE="-w 33 -h 10 -s o -ss 1 -sw 4 -nonl"
+BAR_STYLE="-w 36 -h 12 -s o -ss 1 -sw 4 -nonl"
 BAR_FG_COLOR=$FG_COLOR
-BAR_BG_COLOR="#2e363d"
+BAR_BG_COLOR=$BG_COLOR
 
 NOW_PLAYING_ICON="/home/michael/.icons/dzen2/note.xbm"
 NOW_PLAYING_FORMAT="%a - %t"
