@@ -99,7 +99,7 @@ myBorderWidth = 5
 myFont        = "-*-hermit-medium-r-*-*-16-*-*-*-*-*-*-*"
 -- Colors
 iconColor     = passive
-foreground    = "#1DB5A2"
+foreground    = "#8155a0"
 background    = "#151A21"
-active        = "#25323A"
-passive       = "#B5E8DA"
+active        = "#342ea0"
+passive       = "#418ade"
