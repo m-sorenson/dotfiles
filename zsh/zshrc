@@ -83,3 +83,5 @@ alias ls='ls -h --color=auto'
 alias kearl='curl'
 alias node='node --harmony'
 archey3
+source /usr/share/nvm/init-nvm.sh
+nvm use v0.12
