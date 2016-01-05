@@ -22,6 +22,8 @@ NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/context_filetype.vim'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'mattn/gist-vim'
 NeoBundle 'wincent/Command-T'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'jeffkreeftmeijer/vim-numbertoggle'
@@ -64,6 +66,8 @@ NeoBundle 'yonchu/accelerated-smooth-scroll'
 NeoBundle 'vim-erlang/vim-erlang-omnicomplete'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'cypok/vim-sml'
+NeoBundle 'rust-lang/rust.vim'
 
 
 " Required:
