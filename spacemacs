@@ -25,6 +25,7 @@ values."
      github
      gtags
      shell
+     syntax-checking
      version-control
 
      c-c++
@@ -35,8 +36,8 @@ values."
      html
      javascript
      markdown
-     php
-     react
+     python
+     rust
      sql
 
      eyebrowse
@@ -240,6 +241,7 @@ values."
 It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
+  (setq-default rust-enable-racer t)
   (setq-default
    js2-basic-offset 2
    js2-indent-level 2
@@ -249,6 +251,10 @@ in `dotspacemacs/user-config'."
    web-mode-css-indent-offset 2
    web-mode-code-indent-offset 2
    web-mode-attr-indent-offset 2)
+  (add-hook 'python-mode
+            (lambda ()
+              setq python-shell-interpreter "python"
+              setq anaconda-mode-server-script "~/.local/lib/python2.7/site-packages/anaconda-mode.py"))
   )
 
 (defun dotspacemacs/user-config ()
@@ -264,6 +270,7 @@ layers configuration. You are free to put any user code."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(neo-theme (quote ascii))
  '(standard-indent 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
