@@ -55,31 +55,34 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:/home/michael/.cabal/bin:/home/michael/.gem/ruby/2.1.0/bin:/home/michael/Go/bin:/home/michael/bin"
+export ANDROID_HOME="$HOME/tooling/android-sdk-linux"
 export GOPATH='/home/michael/Go'
+export PATH="/bin:/usr/bin:/usr/local/bin:/home/michael/bin:${GOPATH}/bin:$ANDROID_HOME/tools:${PATH}"
+#export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:/home/michael/.cabal/bin:/home/michael/.gem/ruby/2.1.0/bin:/home/michael/Go/bin:/home/michael/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='emacs'
+fi
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+ export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-alias sumo='sudo'
-alias emacs='emacs -nw'
-TERM=xterm-256color
 alias df='df -h'
 alias ls='ls -h --color=auto'
-alias kearl='curl'
-alias node='node --harmony'
-archey3
+alias docker='sudo docker'
+
+export NVM_DIR="/home/michael/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+nvm use 5
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$HOME/.cargo/bin:$PATH"
+export RUST_SRC_PATH="$HOME/tooling/rust/src"
+clear
